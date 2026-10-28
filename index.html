@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nächstes Video – BrosTwos</title>
+  <meta name="description" content="Countdown zum nächsten Video von BrosTwos – jeden Sonntag um 14:00 Uhr. Sobald ein neues Video online ist, siehst du hier direkt das neueste Video vom Kanal." />
+  <meta name="theme-color" content="#08080d" />
+  <meta property="og:title" content="Nächstes Video – BrosTwos" />
+  <meta property="og:description" content="Jeden Sonntag um 14:00 Uhr kommt ein neues Video. Der Countdown läuft." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff2d55'/%3E%3Cpath d='M26 20l20 12-20 12z' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background" aria-hidden="true">
+    <div class="background__grid"></div>
+    <div class="background__glow background__glow--red"></div>
+    <div class="background__glow background__glow--orange"></div>
+    <div class="background__vignette"></div>
+  </div>
+
+  <a class="release-banner" id="release-banner" href="#video" hidden>
+    <span class="release-banner__pulse" aria-hidden="true"></span>
+    <span class="release-banner__text"><strong>Das neue Video ist online!</strong> Jetzt ansehen</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <header class="topbar">
+    <a class="brand" href="https://www.youtube.com/@mcBrosTwos" target="_blank" rel="noopener">
+      <span class="brand__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </span>
+      <span class="brand__name">BrosTwos</span>
+    </a>
+    <p class="topbar__note"><span class="topbar__dot" aria-hidden="true"></span> Jeden Sonntag · 14:00 Uhr</p>
+  </header>
+
+  <main class="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Nächstes Video</p>
+      <h1 class="hero__title" id="hero-title">Sonntag.<br /><span>14 Uhr.</span><br />Neues Video.</h1>
+      <p class="hero__lead" id="next-info">Der Countdown zu <strong>BrosTwos</strong> läuft. Das nächste Video erscheint am <span id="next-release-date">Sonntag</span> um 14:00 Uhr.</p>
+
+      <div class="countdown" id="countdown" role="timer" aria-label="Countdown zum nächsten Video">
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cd-days">00</span>
+          <span class="countdown__label">Tage</span>
+        </div>
+        <span class="countdown__sep" aria-hidden="true">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cd-hours">00</span>
+          <span class="countdown__label">Stunden</span>
+        </div>
+        <span class="countdown__sep" aria-hidden="true">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cd-minutes">00</span>
+          <span class="countdown__label">Minuten</span>
+        </div>
+        <span class="countdown__sep" aria-hidden="true">:</span>
+        <div class="countdown__unit countdown__unit--seconds">
+          <span class="countdown__value" id="cd-seconds">00</span>
+          <span class="countdown__label">Sekunden</span>
+        </div>
+      </div>
+
+      <div class="progress" aria-hidden="true">
+        <span class="progress__bar" id="week-progress"></span>
+      </div>
+
+      <div class="hero__footer">
+        <p class="status" id="status" data-state="waiting">
+          <span class="status__dot" aria-hidden="true"></span>
+          <span id="status-text">Countdown wird geladen …</span>
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--ghost" href="https://www.youtube.com/@mcBrosTwos" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C16.9 4.1 12 4.1 12 4.1h0s-4.9 0-6.7.2c-.4.1-1.3.1-2.1.9-.6.6-.8 2-.8 2S2.2 8.8 2.2 10.5v1.6c0 1.6.2 3.3.2 3.3s.2 1.4.8 2c.8.8 1.8.8 2.2.9 1.8.2 6.6.2 6.6.2s4.9 0 6.7-.2c.4-.1 1.3-.1 2.1-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.6c0-1.7-.2-3.3-.2-3.3zM9.8 14.1V8.4l5.7 2.9-5.7 2.8z" fill="currentColor"/></svg>
+            Kanal öffnen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest" id="video" aria-labelledby="latest-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Direkt vom Kanal</p>
+          <h2 id="latest-title">Neuestes Video</h2>
+        </div>
+        <div class="section-head__actions">
+          <span class="badge" id="new-badge" hidden><span class="badge__dot" aria-hidden="true"></span> Neu</span>
+          <button class="icon-btn" id="refresh-button" type="button" aria-label="Neuestes Video aktualisieren" title="Aktualisieren">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <article class="video-card" id="video-card">
+        <div class="player is-loading" id="player">
+          <div class="player__poster" id="player-poster">
+            <img id="video-thumbnail" alt="" />
+            <span class="player__overlay" aria-hidden="true"></span>
+            <span class="player__tag" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              YouTube
+            </span>
+            <button class="player__play" id="play-button" type="button" aria-label="Neuestes Video abspielen" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="player__embed" id="player-embed" hidden></div>
+        </div>
+
+        <div class="video-card__body">
+          <p class="video-card__kicker" id="video-kicker">Wird geladen …</p>
+          <h3 class="video-card__title" id="video-title">Das neueste Video wird geladen</h3>
+          <p class="video-card__meta">
+            <time id="video-date" datetime="">–</time>
+            <span class="video-card__dot" aria-hidden="true">·</span>
+            <span>BrosTwos</span>
+          </p>
+          <a class="btn btn--primary" id="video-link" href="https://www.youtube.com/@mcBrosTwos" target="_blank" rel="noopener">
+            Auf YouTube ansehen
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4 10 14M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="video-card__hint" id="video-hint">Falls das Video nicht lädt, öffne es direkt auf YouTube.</p>
+        </div>
+      </article>
+
+      <p class="load-note" id="load-note" role="status" hidden></p>
+    </section>
+
+    <section class="facts" aria-label="Upload-Rhythmus">
+      <div class="fact">
+        <span class="fact__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <div class="fact__text">
+          <strong>Jeden Sonntag</strong>
+          <span>Ein neues Video, jede Woche.</span>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="fact__text">
+          <strong>14:00 Uhr</strong>
+          <span>Pünktlich zur Kaffeezeit.</span>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </span>
+        <div class="fact__text">
+          <strong>Deutsche Zeit</strong>
+          <span>Europe/Berlin – auch bei Zeitumstellung.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Countdown für <a href="https://www.youtube.com/@mcBrosTwos" target="_blank" rel="noopener">BrosTwos</a> · Kein offizielles YouTube-Angebot.</p>
+    <p>© <span id="year">2026</span> BrosTwos</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
